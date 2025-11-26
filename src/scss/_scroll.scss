@@ -1,0 +1,16 @@
+.split-text {
+    position: relative;
+
+    .word {
+        display: inline-block;
+        position: relative;
+        perspective: 30vw;
+        transform-style: preserve-3d;
+
+        .char {
+            display: inline-block;
+            transform-origin: "top center";
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #000000FF, #00000000 100%);
+    z-index: 1000;
+
+    .lockup-created-by-dc {
+        height: 3rem;
+    }
+
+    .logo-dc {
+        height: 3rem;
+    }
+
+}

@@ -1,0 +1,47 @@
+@use './variables' as *;
+
+body,
+#root {
+    font-size: 16px;
+    line-height: 1.1;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    position: relative;
+    font-size: 14vw;
+    line-height: 0.9;
+    margin-bottom: 20vw;
+    perspective: 20vw;
+}
+
+h3 {
+    position: relative;
+    font-size: 10vw;
+    margin-bottom: 20vw;
+    perspective: 20vw;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 8vw;
+        margin-bottom: 10vw;
+
+    }
+
+    h3 {
+        font-size: 5vw;
+        margin-bottom: 10vw;
+    }
+}

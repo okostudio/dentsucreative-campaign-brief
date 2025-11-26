@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Stabil Grotesk';
+    src: url('/fonts/StabilGrotesk-Black.woff2') format('woff2'),
+        url('/fonts/StabilGrotesk-Black.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stabil Grotesk';
+    src: url('/fonts/StabilGrotesk-Bold.woff2') format('woff2'),
+        url('/fonts/StabilGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stabil Grotesk';
+    src: url('/fonts/StabilGrotesk-Light.woff2') format('woff2'),
+        url('/fonts/StabilGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stabil Grotesk';
+    src: url('/fonts/StabilGrotesk-Regular.woff2') format('woff2'),
+        url('/fonts/StabilGrotesk-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
