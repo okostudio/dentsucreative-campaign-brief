@@ -186,6 +186,12 @@ function App() {
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1115777560?fl=pl&fe=sh"}
+          brand="Chery"
+          job="Drive further, stop less"
+        ></VideoPlayer>
+
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1084827843?fl=pl&fe=sh"}
           brand="RMIT"
           job="What the Future?!"
         ></VideoPlayer>
