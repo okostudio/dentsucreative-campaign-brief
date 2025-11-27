@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 
 import { gsap } from "gsap";
@@ -22,13 +22,12 @@ const ScrollReveal = (props) => {
 
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: ".split-text",
-                        start: "top +=60%",
-                        end: "bottom +=80%",
-                        markers: true,
+                        trigger: props.trigger ? props.trigger : ".split-text",
+                        start: "top +=80%",
+                        end: "bottom +=40%",
+                        markers: false,
                         scrub: 1,
                         normalizeScroll: true
-
                     }
                 })
 
@@ -38,7 +37,9 @@ const ScrollReveal = (props) => {
                         tl.from(split.chars, { duration: 0.02, ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<1")
                         break;
                     case "random":
-                        tl.from(split.chars, { duration: 3, ease: "power3.out", color: "#222", rotateX: 90, opacity: 0, stagger: { amount: 3, from: "random", ease: "out" } })
+                        split.lines.map((line, i) => {
+                            tl.from(line.querySelectorAll(".char"), { duration: 3, ease: "power3.out", color: "#222", rotateX: 90, opacity: 0, stagger: { amount: 3, from: "random", ease: "out" } }, i * 2)
+                        })
                         break
                     default: break;
                 }
@@ -61,14 +62,3 @@ const ScrollReveal = (props) => {
 }
 
 export default ScrollReveal
-
-
-
-
-// {
-//                     [...Array(props.repeat)].map(() => (
-//                         <div key={uuidv4()}>
-//                             {props.children}
-//                         </div>
-//                     ))
-//                 }

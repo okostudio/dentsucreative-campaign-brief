@@ -1,0 +1,22 @@
+.video-wrapper {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 20vw;
+
+    .video {
+        width: 100%;
+        aspect-ratio: calc(16 / 9);
+        overflow: clip;
+        border-radius: 3vw;
+    }
+
+    h3 {
+        margin-bottom: 3vw;
+        font-weight: 500;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+}
