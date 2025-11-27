@@ -23,8 +23,8 @@ const ScrollReveal = (props) => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: props.trigger ? props.trigger : ".split-text",
-                        start: "top +=80%",
-                        end: "bottom +=40%",
+                        start: "top center",
+                        end: "bottom center",
                         markers: false,
                         scrub: 1,
                         normalizeScroll: true

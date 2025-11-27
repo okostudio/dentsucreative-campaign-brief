@@ -16,8 +16,8 @@ const BubblesReveal = (props) => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: wrapper.current,
-                        start: "top +=0%",
-                        end: "bottom +=100%",
+                        start: "top center",
+                        end: "bottom center",
                         markers: false,
                         scrub: 1,
                         normalizeScroll: true

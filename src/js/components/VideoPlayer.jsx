@@ -21,9 +21,9 @@ const VideoPlayer = (props) => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: wrapper.current,
-                        start: "top +=70%",
-                        end: "bottom +=50%",
-                        markers: true,
+                        start: "top center",
+                        end: "bottom center",
+                        markers: false,
                         onEnter: () => { setIsPlaying(true); },
                         onLeave: () => { setIsPlaying(false); }
                     }
