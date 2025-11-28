@@ -25,7 +25,9 @@ const VideoPlayer = (props) => {
                         end: "bottom center",
                         markers: false,
                         onEnter: () => { setIsPlaying(true); },
-                        onLeave: () => { setIsPlaying(false); }
+                        onEnterBack: () => { setIsPlaying(true); },
+                        onLeave: () => { setIsPlaying(false); },
+                        onLeaveBack: () => { setIsPlaying(false); }
                     }
                 })
                 tl.from(".video", { opacity: 0, y: "2vw", ease: "power3.out" })
@@ -36,7 +38,7 @@ const VideoPlayer = (props) => {
 
     return (
         <div className="video-wrapper" ref={wrapper}>
-            <h3><strong>{props.brand}</strong> - {props.job}</h3>
+            <h4><strong>{props.brand}</strong> - {props.job}</h4>
             <div className="video">
                 <ReactPlayer
                     ref={video}

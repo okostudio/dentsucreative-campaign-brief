@@ -14,12 +14,16 @@ import BubblesWins from './js/components/BubblesWins';
 import BubblesAwards from './js/components/BubblesAwards';
 import BubblesNewLeadership from './js/components/BubblesNewLeadership';
 
+import diagramExperience from '/images/gfx/diagram.png';
+import dentsuJapanese from '/images/gfx/dc-jp.png';
+import { LogoDCTagline } from './js/svg/SVGElements';
+
 
 function App() {
   const lenisRef = useRef()
   const lenisOptions = {
-    lerp: 0.5, // Adjust this value for desired smoothness
-    duration: 1.2,
+    lerp: 0.15, // Adjust this value for desired smoothness
+    duration: 1.0,
     smoothTouch: true,
     smooth: true,
     autoRaf: false
@@ -39,8 +43,6 @@ function App() {
     <>
       <ReactLenis root ref={lenisRef} options={lenisOptions} />
       <Nav />
-
-
 
       <div className="main">
 
@@ -303,11 +305,44 @@ function App() {
           </ScrollReveal>
         </h3>
 
-        <h2 className="momentum left">
-          <ScrollReveal type="basic">
-            DentsuWarmingUp.
-          </ScrollReveal>
-        </h2>
+        <div className="warming-up">
+          <h2 className="">
+            <ScrollReveal type="random">
+              DentsWarmingUp.
+            </ScrollReveal>
+          </h2>
+          <h3 className="">
+            <ScrollReveal type="basic">
+              Which we can <strong>take across the</strong> <br />
+              <strong>entire customer experience</strong>
+            </ScrollReveal>
+          </h3>
+
+          <div>
+            <img src={diagramExperience} alt="Diagram Experience" className='diagram' />
+          </div>
+
+          <div>
+            <img src={dentsuJapanese} alt="Diagram Experience" className='dc-jp' />
+          </div>
+
+          <div className="cmos">
+            <ScrollReveal type="random">
+              <h2><strong>300 CMOS</strong></h2>
+            </ScrollReveal>
+          </div>
+
+          <div className="aim">
+            <h2>
+              <ScrollReveal type="random">
+                But we have one aim: <br />
+                <strong>That you feel our passion</strong>
+              </ScrollReveal>
+            </h2>
+          </div>
+
+          <LogoDCTagline />
+        </div>
 
       </div>
     </>

@@ -20,7 +20,7 @@ body,
 
 h2 {
     position: relative;
-    font-size: 12vw;
+    font-size: 10vw;
     line-height: 1.1;
     margin-bottom: 20vw;
     perspective: 20vw;
@@ -33,7 +33,15 @@ h2 {
 
 h3 {
     position: relative;
-    font-size: 9vw;
+    font-size: 7.5vw;
+    margin-bottom: 20vw;
+    perspective: 20vw;
+    letter-spacing: -0.02em;
+}
+
+h4 {
+    position: relative;
+    font-size: 6vw;
     margin-bottom: 20vw;
     perspective: 20vw;
     letter-spacing: -0.02em;
@@ -41,17 +49,25 @@ h3 {
 
 @media (min-width: 768px) {
     h2 {
-        font-size: 6.8vw;
+        font-size: 6.0vw;
         margin-bottom: 10vw;
 
+        &.intro {
+            font-size: 6vw;
+        }
     }
 
     h3 {
-        font-size: 5.2vw;
+        font-size: 4.3vw;
         margin-bottom: 10vw;
 
         &.xl {
-            font-size: 9vw;
+            font-size: 7.5vw;
         }
+    }
+
+    h4 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
     }
 }

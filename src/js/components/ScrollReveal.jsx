@@ -26,19 +26,19 @@ const ScrollReveal = (props) => {
                         start: "top center",
                         end: "bottom center",
                         markers: false,
-                        scrub: 1,
+                        scrub: 0.75,
                         normalizeScroll: true
                     }
                 })
 
                 switch (props.type) {
                     case "basic":
-                        tl.from(split.lines, { duration: 1.5, opacity: 0.3, ease: "power3.inOut", stagger: { amount: 2 } })
-                        tl.from(split.chars, { duration: 0.02, ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<1")
+                        // tl.from(split.lines, { duration: 1.5, opacity: 0.3, ease: "power3.inOut", stagger: { amount: 2 } })
+                        tl.from(split.chars, { duration: 1, filter: "blur(10px)", ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<0")
                         break;
                     case "random":
                         split.lines.map((line, i) => {
-                            tl.from(line.querySelectorAll(".char"), { duration: 3, ease: "power3.out", color: "#222", rotateX: 90, opacity: 0, stagger: { amount: 3, from: "random", ease: "out" } }, i * 2)
+                            tl.from(line.querySelectorAll(".char"), { duration: 2.5, ease: "power3.out", color: "#222", rotateX: 120, opacity: 0, stagger: { amount: 3, from: "random", ease: "out" } }, i * 2)
                         })
                         break
                     default: break;

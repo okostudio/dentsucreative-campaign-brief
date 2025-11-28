@@ -19,7 +19,7 @@ const BubblesReveal = (props) => {
                         start: "top center",
                         end: "bottom center",
                         markers: false,
-                        scrub: 1,
+                        scrub: 0.5,
                         normalizeScroll: true
                     }
                 })

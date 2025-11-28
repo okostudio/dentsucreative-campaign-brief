@@ -1,0 +1,49 @@
+.warming-up {
+
+    h2,
+    h3 {
+        font-weight: 500;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+
+    .diagram {
+        width: 80%;
+        margin-bottom: 10vw
+    }
+
+    .dc-jp {
+        width: 2vw;
+        margin-bottom: 10vw
+    }
+
+    .cmos {
+        width: 100%;
+        aspect-ratio: calc(16/9);
+        background-image: url("/images/gfx/map.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10vw;
+
+        h2 {
+            padding: 10vw 0;
+        }
+    }
+
+    .aim {
+        margin-bottom: 20vw;
+
+        h2 {
+            padding: 10vw 0;
+        }
+    }
+
+    .logo-dc-tagline {
+        width: 12vw;
+    }
+}

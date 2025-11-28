@@ -1,15 +1,19 @@
 .split-text {
     position: relative;
 
-    .word {
-        display: inline-block;
-        position: relative;
+    .line {
         perspective: 30vw;
-        transform-style: preserve-3d;
+        position: relative;
 
-        .char {
+        .word {
             display: inline-block;
-            transform-origin: "top center";
+            position: relative;
+            transform-style: preserve-3d;
+
+            .char {
+                display: inline-block;
+                transform-origin: 0.5em 0;
+            }
         }
     }
 

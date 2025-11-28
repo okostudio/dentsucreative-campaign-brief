@@ -8,6 +8,7 @@
 @use './scss/nav';
 @use './scss/video';
 @use './scss/bubbles';
+@use './scss/warming-up';
 
 #root {
   width: 100%;
@@ -18,5 +19,9 @@
 }
 
 .main {
-  margin: 40vh 0;
+  margin: 50vh 2vw 30vw 2vw;
+
+  @media (min-width: 768px) {
+    margin: 50vh 8vw 30vw 8vw;
+  }
 }
