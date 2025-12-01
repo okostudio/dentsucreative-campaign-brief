@@ -9,3 +9,13 @@
         display: inline-block;
     }
 }
+
+.grid-col2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 2vw;
+    column-gap: 2vw;
+
+    margin-bottom: 3vw;
+}

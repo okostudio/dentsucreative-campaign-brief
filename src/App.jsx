@@ -14,9 +14,17 @@ import BubblesWins from './js/components/BubblesWins';
 import BubblesAwards from './js/components/BubblesAwards';
 import BubblesNewLeadership from './js/components/BubblesNewLeadership';
 
-import diagramExperience from '/images/gfx/diagram.png';
+import diagramExperience from '/images/gfx/Gift-Customer-Experience.gif';
 import dentsuJapanese from '/images/gfx/dc-jp.png';
+
 import { LogoDCTagline } from './js/svg/SVGElements';
+
+import logoAmex from '/images/logos/logo-amex.png';
+import logoChery from '/images/logos/logo-chery.png';
+import logoIconicUber from '/images/logos/logo-iconic-uber.png';
+import logoIconic from '/images/logos/logo-iconic.png';
+import logoRMIT from '/images/logos/logo-rmit.png';
+import logoZespri from '/images/logos/logo-zespri.png';
 
 
 function App() {
@@ -74,7 +82,6 @@ function App() {
         <h2 className="intro">
           <ScrollReveal repeat={1} type="random">
             Local & International Awards <br className='hideMoboile' />
-            Growing Sydney Office <br className='hideMoboile' />
             New Leadership Team <br className='hideMoboile' />
             New Business Wins <br className='hideMoboile' />
             New People
@@ -186,27 +193,33 @@ function App() {
           </h3>
         </div>
 
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1115777560?fl=pl&fe=sh"}
-          brand="Chery"
-          job="Drive further, stop less"
-        ></VideoPlayer>
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1084827843?fl=pl&fe=sh"}
-          brand="RMIT"
+          brand={logoRMIT}
           job="What the Future?!"
         ></VideoPlayer>
 
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1084821174?fl=pl&fe=sh"}
-          brand="Zespri"
-          job="Healthier Ways"
-        ></VideoPlayer>
+        <div className="grid-col2">
+          <h3 className="momentum left r40">
+            <ScrollReveal type="basic">
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum
+            </ScrollReveal>
+          </h3>
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1084821174?fl=pl&fe=sh"}
+            brand={logoZespri}
+            job="Healthier Ways"
+          ></VideoPlayer>
+        </div>
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1084815116?fl=pl&fe=sh"}
-          brand="Iconic"
+          brand={logoIconic}
           job="Banner Ad Changeroom"
         ></VideoPlayer>
 
@@ -224,14 +237,27 @@ function App() {
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141061873?fl=pl&fe=sh"}
-          brand="Amex"
-          job="FPO Film 1"
+          brand={logoAmex}
+          job="FPO Film"
         ></VideoPlayer>
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
-          brand="Amex"
-          job="FPO Film 2"
-        ></VideoPlayer>
+
+        <div className="grid-col2">
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="FPO Film"
+          ></VideoPlayer>
+          <h3 className="momentum left r40">
+            <ScrollReveal type="basic">
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum
+            </ScrollReveal>
+          </h3>
+        </div>
+
 
         <div className="creative-work">
           <h3 className="xl">
@@ -247,23 +273,56 @@ function App() {
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141062891?fl=pl&fe=sh"}
-          brand="Amex"
-          job="Plan It 1"
+          brand={logoAmex}
+          job="Plan It"
         ></VideoPlayer>
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
-          brand="Amex"
-          job="Plan It 2"
-        ></VideoPlayer>
+
+        <div className="grid-col2">
+
+          <h3 className="momentum left r40">
+            <ScrollReveal type="basic">
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum
+            </ScrollReveal>
+          </h3>
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="Plan It"
+          ></VideoPlayer>
+        </div>
+
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141063914?fl=pl&fe=sh"}
-          brand="Amex"
-          job="Plan It 3"
+        // brand={logoAmex}
+        // job="Plan It"
         ></VideoPlayer>
+
+        <div className="grid-col2">
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="Plan It"
+          ></VideoPlayer>
+          <h3 className="momentum left r40">
+            <ScrollReveal type="basic">
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum <br />
+              Momentum
+            </ScrollReveal>
+          </h3>
+        </div>
+
+
         <VideoPlayer
-          videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
-          brand="Amex"
-          job="Plan It 4"
+          videoUrl={"https://vimeo.com/1115777560?fl=pl&fe=sh"}
+          brand={logoChery}
+          job="Drive further, stop less"
         ></VideoPlayer>
 
         <div className="creative-work">
@@ -280,18 +339,31 @@ function App() {
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141064026?fl=pl&fe=sh"}
-          brand="ICONIC"
-          job="Got you Looking 1"
+          brand={logoIconic}
+          job="Got you Looking"
         ></VideoPlayer>
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141063976?fl=pl&fe=sh"}
-          brand="ICONIC"
-          job="Got you Looking 2"
-        ></VideoPlayer>
+        <div className="grid-col2">
+
+          <h3 className="momentum">
+            <ScrollReveal type="basic">
+              Got you Looking <br />
+              Got you Looking <br />
+              Got you Looking <br />
+              Got you Looking <br />
+              Got you Looking
+            </ScrollReveal>
+          </h3>
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141063976?fl=pl&fe=sh"}
+          // brand={logoIconic}
+          // job="Got you Looking"
+          ></VideoPlayer>
+        </div>
+
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141064070?fl=pl&fe=sh"}
-          brand="ICONIC"
-          job="Got you Looking 3"
+        // brand={logoIconic}
+        // job="Got you Looking"
         ></VideoPlayer>
 
         <h3 className="momentum left">
@@ -307,8 +379,8 @@ function App() {
 
         <div className="warming-up">
           <h2 className="">
-            <ScrollReveal type="random">
-              DentsWarmingUp.
+            <ScrollReveal type="fade">
+              <strong>DentsWarmingUp.</strong>
             </ScrollReveal>
           </h2>
           <h3 className="">

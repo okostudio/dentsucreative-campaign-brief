@@ -38,7 +38,10 @@ const VideoPlayer = (props) => {
 
     return (
         <div className="video-wrapper" ref={wrapper}>
-            <h4><strong>{props.brand}</strong> - {props.job}</h4>
+            {props.brand && props.job ?
+                <h4><img className='brand-logo' src={props.brand} alt={props.job} /><span className="divider-horz"></span>{props.job}</h4>
+                : null
+            }
             <div className="video">
                 <ReactPlayer
                     ref={video}

@@ -13,6 +13,8 @@
             .char {
                 display: inline-block;
                 transform-origin: 0.5em 0;
+
+                will-change: opacity, filter, color, transform;
             }
         }
     }

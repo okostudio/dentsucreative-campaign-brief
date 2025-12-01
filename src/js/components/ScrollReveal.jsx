@@ -41,6 +41,9 @@ const ScrollReveal = (props) => {
                             tl.from(line.querySelectorAll(".char"), { duration: 2.5, ease: "power3.out", color: "#222", rotateX: 120, opacity: 0, stagger: { amount: 3, from: "random", ease: "out" } }, i * 2)
                         })
                         break
+                    case "fade":
+                        tl.from(split.lines, { duration: 2.5, ease: "power3.out", opacity: 0, stagger: { amount: 3, ease: "out" } })
+                        break
                     default: break;
                 }
 
