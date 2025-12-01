@@ -7,8 +7,11 @@ import effie from "/images/awards/effie.png"
 import OMA from "/images/awards/OMA.png"
 
 import BubblesReveal from './BubblesReveal'
+import useIsMobile from '../hooks/useIsMobile'
 
 const BubblesAwards = () => {
+    const isMobile = useIsMobile(768);
+
     return (
         <BubblesReveal>
             <Bubble>
@@ -38,6 +41,13 @@ const BubblesAwards = () => {
                     <h5>1x Award</h5>
                 </div>
             </Bubble>
+
+            {
+                isMobile ?
+                    null
+                    :
+                    <div className="spacer"></div>
+            }
 
             <Bubble>
                 <div>

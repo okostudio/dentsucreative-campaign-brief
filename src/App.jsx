@@ -1,32 +1,46 @@
+
 import './App.scss'
+
+import useIsMobile from './js/hooks/useIsMobile';
+
 import Nav from './js/components/Nav'
 import ScrollReveal from './js/components/ScrollReveal'
 
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from 'react';
-
 gsap.registerPlugin(useGSAP);
+
+import StaticImageParallax from './js/components/StaticImageParallax';
 
 import { ReactLenis } from 'lenis/react'
 import VideoPlayer from './js/components/VideoPlayer';
 import BubblesWins from './js/components/BubblesWins';
 import BubblesAwards from './js/components/BubblesAwards';
 import BubblesNewLeadership from './js/components/BubblesNewLeadership';
+import BubblesNewPeople from './js/components/BubblesNewPeople';
 
+
+// images
 import diagramExperience from '/images/gfx/Gift-Customer-Experience.gif';
 import dentsuJapanese from '/images/gfx/dc-jp.png';
 
 import { LogoDCTagline } from './js/svg/SVGElements';
 
-import logoAmex from '/images/logos/logo-amex.png';
-import logoChery from '/images/logos/logo-chery.png';
-// import logoIconicUber from kl,l,ll'/images/logos/logo-iconic-uber.png';
-import logoIconic from '/images/logos/logo-iconic.png';
-import logoRMIT from '/images/logos/logo-rmit.png';
-import logoZespri from '/images/logos/logo-zespri.png';
-import BubblesNewPeople from './js/components/BubblesNewPeople';
-import useIsMobile from './js/hooks/useIsMobile';
+import logoAmex from '/images/logos/work/logo-amex.png';
+import logoChery from '/images/logos/work/logo-chery.png';
+import logoIconic from '/images/logos/work/logo-iconic.png';
+import logoRMIT from '/images/logos/work/logo-rmit.png';
+import logoZespri from '/images/logos/work/logo-zespri.png';
+import logoCOD from '/images/logos/work/logo-cod.png';
+
+import codBG from '/images/work/cod-bg.png';
+import codText from '/images/work/cod-text.png';
+
+
+
+
+
 
 
 function App() {
@@ -415,6 +429,14 @@ function App() {
         // brand={logoIconic}
         // job="Got you Looking"
         ></VideoPlayer>
+
+        <StaticImageParallax
+          brand={logoCOD}
+          job="Black Ops 7"
+        >
+          <img src={codBG} alt="Call Of Duty" />
+          <img src={codText} alt="Call Of Duty" />
+        </StaticImageParallax>
 
         <h3 className="momentum left">
           <ScrollReveal type="basic">

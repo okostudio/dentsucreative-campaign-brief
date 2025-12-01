@@ -13,7 +13,7 @@ import zac from "/images/people/leadership/zac.png"
 import useIsMobile from '../hooks/useIsMobile'
 
 const BubblesNewLeadership = () => {
-    const isMobile = useIsMobile;
+    const isMobile = useIsMobile(768);
 
     return (
         <BubblesReveal>
@@ -90,7 +90,7 @@ const BubblesNewLeadership = () => {
                 isMobile ?
                     null
                     :
-                    <Bubble />
+                    <div className="spacer"></div>
             }
 
 
