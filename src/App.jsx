@@ -131,7 +131,7 @@ function App() {
         <div className="wins">
           <h2>
             <ScrollReveal repeat={1} type="random">
-              5 New Business <br />
+              9 New Business <br />
               Wins in 2025
             </ScrollReveal>
           </h2>
