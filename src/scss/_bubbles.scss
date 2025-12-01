@@ -16,21 +16,29 @@
     > :nth-child(4),
     > :nth-child(5),
     > :nth-child(6),
-    > :nth-child(7) {
+    > :nth-child(7),
+    > :nth-child(8),
+    > :nth-child(9),
+    > :nth-child(10),
+    > :nth-child(11),
+    > :nth-child(12) {
         grid-column: span 3;
     }
 
 
     > :nth-child(2),
     > :nth-child(4),
-    > :nth-child(6) {
+    > :nth-child(6),
+    > :nth-child(8),
+    > :nth-child(10) {
         margin-right: 30vw;
     }
 
     > :nth-child(1),
     > :nth-child(3),
     > :nth-child(5),
-    > :nth-child(7) {
+    > :nth-child(7),
+    > :nth-child(9) {
         margin-left: 30vw;
     }
 
@@ -85,8 +93,8 @@
         position: relative;
         padding: 0;
         border-radius: 50%;
-        width: 60vw;
-        height: 60vw;
+        width: 50vw;
+        height: 50vw;
         border: 1px solid white;
 
         display: flex;
@@ -99,8 +107,13 @@
 
         svg {
             fill: #fff;
-            width: 17vw;
-            height: 17vw;
+            width: 40vw;
+            height: 40vw;
+        }
+
+        img {
+            width: 40vw;
+            height: 40vw;
         }
 
         h5 {
@@ -118,6 +131,11 @@
         @media (min-width: 768px) {
             width: 20vw;
             height: 20vw;
+
+            img {
+                width: 17vw;
+                height: 17vw;
+            }
         }
 
         @media (min-width: 1440px) {
@@ -136,31 +154,47 @@
 .awards {
     .bubble {
         transition: background-color 0.3s ease-out, transform 0.5s ease-out;
-        ;
 
         img {
-            width: 16vw;
-            height: 7vw;
+            width: 40vw;
+            height: 20vw;
             transition: filter 0.3s ease-out, transform 0.5s ease-out;
             object-fit: contain;
             object-position: bottom;
             margin-bottom: 1vw;
         }
 
-
-
-        img {
-            width: 12vw;
-            height: 5vw;
-        }
-
-
         h5 {
             color: white;
             transition: color 0.3s ease-out;
-            font-size: 1.5vw;
+            font-size: 3.5vw;
             font-weight: 500;
         }
+
+
+        @media (min-width: 768px) {
+            img {
+                width: 16vw;
+                height: 7vw;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            img {
+                width: 12vw;
+                height: 5vw;
+            }
+
+            h5 {
+                color: white;
+                transition: color 0.3s ease-out;
+                font-size: 1.5vw;
+                font-weight: 500;
+            }
+        }
+
+
+
 
         &:hover {
             background-color: white;
@@ -198,6 +232,8 @@
                 width: 80vw;
                 font-size: 3.5vw;
             }
+
+            margin-bottom: 7vw;
         }
 
         @media (min-width: 768px) {
@@ -209,7 +245,10 @@
             > :nth-child(3),
             > :nth-child(4),
             > :nth-child(5),
-            > :nth-child(6) {
+            > :nth-child(6),
+            > :nth-child(7),
+            > :nth-child(8),
+            > :nth-child(9) {
                 position: relative;
                 grid-column: span 1;
                 margin: 0;
@@ -219,12 +258,14 @@
             > :nth-child(2),
             > :nth-child(5),
             > :nth-child(8) {
-                top: 6vw;
+                top: 12vw;
             }
 
 
 
             .bubble {
+                margin-bottom: 2vw;
+
                 img {
                     width: 18vw;
                     height: 18vw;

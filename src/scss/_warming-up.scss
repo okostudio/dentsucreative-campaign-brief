@@ -44,6 +44,17 @@
     }
 
     .logo-dc-tagline {
-        width: 12vw;
+        width: 30vw;
+
+        @media (min-width: 768px) {
+            width: 15vw;
+        }
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
     }
 }

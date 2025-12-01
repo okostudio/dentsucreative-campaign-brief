@@ -21,13 +21,17 @@ import { LogoDCTagline } from './js/svg/SVGElements';
 
 import logoAmex from '/images/logos/logo-amex.png';
 import logoChery from '/images/logos/logo-chery.png';
-import logoIconicUber from '/images/logos/logo-iconic-uber.png';
+// import logoIconicUber from kl,l,ll'/images/logos/logo-iconic-uber.png';
 import logoIconic from '/images/logos/logo-iconic.png';
 import logoRMIT from '/images/logos/logo-rmit.png';
 import logoZespri from '/images/logos/logo-zespri.png';
+import BubblesNewPeople from './js/components/BubblesNewPeople';
+import useIsMobile from './js/hooks/useIsMobile';
 
 
 function App() {
+  const isMobile = useIsMobile(768);
+
   const lenisRef = useRef()
   const lenisOptions = {
     lerp: 0.15, // Adjust this value for desired smoothness
@@ -163,7 +167,7 @@ function App() {
               New Faces
             </ScrollReveal>
           </h3>
-          <BubblesNewLeadership />
+          <BubblesNewPeople />
         </div>
 
 
@@ -200,22 +204,32 @@ function App() {
           job="What the Future?!"
         ></VideoPlayer>
 
-        <div className="grid-col2">
-          <h3 className="momentum left r40">
-            <ScrollReveal type="basic">
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum
-            </ScrollReveal>
-          </h3>
+
+        {isMobile ?
           <VideoPlayer
             videoUrl={"https://vimeo.com/1084821174?fl=pl&fe=sh"}
             brand={logoZespri}
             job="Healthier Ways"
           ></VideoPlayer>
-        </div>
+          :
+          <div className="grid-col2">
+            <h3 className="momentum left r40">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1084821174?fl=pl&fe=sh"}
+              brand={logoZespri}
+              job="Healthier Ways"
+            ></VideoPlayer>
+          </div>
+        }
+
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1084815116?fl=pl&fe=sh"}
@@ -241,22 +255,32 @@ function App() {
           job="FPO Film"
         ></VideoPlayer>
 
-        <div className="grid-col2">
+
+        {isMobile ?
           <VideoPlayer
             videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
           // brand={logoAmex}
           // job="FPO Film"
           ></VideoPlayer>
-          <h3 className="momentum left r40">
-            <ScrollReveal type="basic">
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum
-            </ScrollReveal>
-          </h3>
-        </div>
+          :
+          <div className="grid-col2">
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="FPO Film"
+            ></VideoPlayer>
+            <h3 className="momentum left r40">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+          </div>
+        }
+
 
 
         <div className="creative-work">
@@ -277,23 +301,31 @@ function App() {
           job="Plan It"
         ></VideoPlayer>
 
-        <div className="grid-col2">
-
-          <h3 className="momentum left r40">
-            <ScrollReveal type="basic">
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum
-            </ScrollReveal>
-          </h3>
+        {isMobile ?
           <VideoPlayer
             videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
           // brand={logoAmex}
           // job="Plan It"
           ></VideoPlayer>
-        </div>
+          :
+          <div className="grid-col2">
+            <h3 className="momentum">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="Plan It"
+            ></VideoPlayer>
+          </div>
+        }
+
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141063914?fl=pl&fe=sh"}
@@ -301,22 +333,31 @@ function App() {
         // job="Plan It"
         ></VideoPlayer>
 
-        <div className="grid-col2">
+        {isMobile ?
           <VideoPlayer
             videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
           // brand={logoAmex}
           // job="Plan It"
           ></VideoPlayer>
-          <h3 className="momentum left r40">
-            <ScrollReveal type="basic">
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum <br />
-              Momentum
-            </ScrollReveal>
-          </h3>
-        </div>
+          :
+          <div className="grid-col2">
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="Plan It"
+            ></VideoPlayer>
+            <h3 className="momentum left r40">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+          </div>
+        }
+
 
 
         <VideoPlayer
@@ -342,23 +383,32 @@ function App() {
           brand={logoIconic}
           job="Got you Looking"
         ></VideoPlayer>
-        <div className="grid-col2">
-
-          <h3 className="momentum">
-            <ScrollReveal type="basic">
-              Got you Looking <br />
-              Got you Looking <br />
-              Got you Looking <br />
-              Got you Looking <br />
-              Got you Looking
-            </ScrollReveal>
-          </h3>
+        {isMobile ?
           <VideoPlayer
             videoUrl={"https://vimeo.com/1141063976?fl=pl&fe=sh"}
           // brand={logoIconic}
           // job="Got you Looking"
           ></VideoPlayer>
-        </div>
+          :
+          <div className="grid-col2">
+
+            <h3 className="momentum">
+              <ScrollReveal type="basic">
+                Got you Looking <br />
+                Got you Looking <br />
+                Got you Looking <br />
+                Got you Looking <br />
+                Got you Looking
+              </ScrollReveal>
+            </h3>
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141063976?fl=pl&fe=sh"}
+            // brand={logoIconic}
+            // job="Got you Looking"
+            ></VideoPlayer>
+          </div>
+        }
+
 
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141064070?fl=pl&fe=sh"}
@@ -385,8 +435,17 @@ function App() {
           </h2>
           <h3 className="">
             <ScrollReveal type="basic">
-              Which we can <strong>take across the</strong> <br />
-              <strong>entire customer experience</strong>
+              {
+                isMobile ?
+                  <>
+                    Which we can <strong>take across the entire customer experience</strong>
+                  </>
+                  :
+                  <>
+                    Which we can <strong>take across the</strong> <br />
+                    <strong>entire customer experience</strong>
+                  </>
+              }
             </ScrollReveal>
           </h3>
 
@@ -413,7 +472,9 @@ function App() {
             </h2>
           </div>
 
-          <LogoDCTagline />
+          <div className="logo-section">
+            <LogoDCTagline />
+          </div>
         </div>
 
       </div>

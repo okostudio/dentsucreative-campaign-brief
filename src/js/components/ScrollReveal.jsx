@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "../../plugins/SplitText.js";
+import useIsMobile from '../hooks/useIsMobile.js';
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
@@ -13,6 +14,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const ScrollReveal = (props) => {
     const scrollWrapper = useRef()
+    const isMobile = useIsMobile(768)
 
     useGSAP(
 
@@ -33,8 +35,13 @@ const ScrollReveal = (props) => {
 
                 switch (props.type) {
                     case "basic":
-                        // tl.from(split.lines, { duration: 1.5, opacity: 0.3, ease: "power3.inOut", stagger: { amount: 2 } })
-                        tl.from(split.chars, { duration: 1, filter: "blur(10px)", ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<0")
+                        {
+                            isMobile ?
+                                tl.from(split.chars, { duration: 1, ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<0")
+                                :
+                                tl.from(split.chars, { duration: 1, filter: "blur(10px)", ease: "power3.out", color: "#222", stagger: { amount: 3 } }, "<0")
+                        }
+
                         break;
                     case "random":
                         split.lines.map((line, i) => {
@@ -42,7 +49,7 @@ const ScrollReveal = (props) => {
                         })
                         break
                     case "fade":
-                        tl.from(split.lines, { duration: 2.5, ease: "power3.out", opacity: 0, stagger: { amount: 3, ease: "out" } })
+                        tl.from(split.lines, { duration: 2.5, ease: "power2.out", color: "#222", stagger: { amount: 3, ease: "out" } })
                         break
                     default: break;
                 }
