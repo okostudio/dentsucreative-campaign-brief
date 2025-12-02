@@ -60,6 +60,14 @@ const VideoPlayerMobile = (props) => {
                     />
                 </div>
             </div>
+            {
+                props.children ?
+                    <div className="overlay">
+                        {props.children}
+                    </div>
+                    : null
+
+            }
         </div>
     )
 }

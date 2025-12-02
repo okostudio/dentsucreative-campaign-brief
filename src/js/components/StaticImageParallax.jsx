@@ -58,7 +58,7 @@ const StaticImageParallax = (props) => {
                 <h4><img className='brand-logo' src={props.brand} alt={props.job} /><span className="divider-horz"></span>{props.job}</h4>
                 : null
             }
-            < div className="mobile video" >
+            <div className="mobile video">
                 <img src={iphone} alt="iphone 16" className='phone' />
                 <div className="video-scaler">
                     <ReactPlayer
@@ -71,9 +71,9 @@ const StaticImageParallax = (props) => {
                         height='100%'
                     />
                 </div>
-                <div className="images">
+                {/* <div className="images">
                     {props.children}
-                </div>
+                </div> */}
             </div >
         </div>
     )

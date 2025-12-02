@@ -32,10 +32,10 @@
             }
 
             .video-scaler {
-                width: 92%;
+                width: 94%;
                 height: 100%;
                 top: 0;
-                left: 4%;
+                left: 3%;
                 position: absolute;
 
                 video {
@@ -99,7 +99,19 @@
         }
     }
 
+    .overlay {
+        position: absolute;
+        top: 8vw;
+        width: 90vw;
+        height: auto;
+        left: -3vw;
 
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .grid-col2 {

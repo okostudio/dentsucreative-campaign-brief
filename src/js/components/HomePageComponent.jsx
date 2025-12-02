@@ -33,7 +33,7 @@ import logoRMIT from '/images/logos/work/logo-rmit.png';
 import logoZespri from '/images/logos/work/logo-zespri.png';
 import logoCOD from '/images/logos/work/logo-cod.png';
 
-import codBG from '/images/work/cod-bg.png';
+// import codBG from '/images/work/cod-bg.png';
 import codText from '/images/work/cod-text.png';
 
 function HomePageComponent() {
@@ -391,13 +391,13 @@ function HomePageComponent() {
                 }
 
 
-                <StaticImageParallax
+                <VideoPlayerMobile
+                    videoUrl="/videos/CoD_BlackOps7_LaunchVideo_Alt_2_V006_compressed_1.mp4"
                     brand={logoCOD}
                     job="Black Ops 7"
                 >
-                    <img src={codBG} alt="Call Of Duty" />
                     <img src={codText} alt="Call Of Duty" />
-                </StaticImageParallax>
+                </VideoPlayerMobile>
 
                 <h3 className="momentum left">
                     <ScrollReveal type="basic">
