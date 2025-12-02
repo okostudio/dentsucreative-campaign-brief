@@ -46,7 +46,7 @@ const BubblesNewPeople = () => {
                     <img src={EbonyStantin} alt="New Person" />
                     <h5>
                         <strong>Ebony Stantin </strong><br />
-                        PR Senior Accoutn Director
+                        PR Senior Account Director
                     </h5>
                 </div>
             </Bubble>
