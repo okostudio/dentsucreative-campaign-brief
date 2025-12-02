@@ -31,8 +31,8 @@ const BubblesNewLeadership = () => {
                 <div>
                     <img src={csr} alt="Cate-Stuart Robertson" />
                     <h5>
-                        <strong>Cate-Stuart Robertson</strong><br />
-                        Managing Director
+                        <strong>Cate Stuart-Robertson</strong><br />
+                        Managing Director ANZ
                     </h5>
                 </div>
             </Bubble>
