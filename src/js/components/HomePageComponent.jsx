@@ -353,6 +353,7 @@ function HomePageComponent() {
                 {/* AMEX MOBILE VIDEO THING ============= */}
                 <VideoPlayerMobile
                     videoUrl="/videos/DEN086_Amex_Membership_081025_Lets_Go_Back_9x16_60fps.mp4"
+                    posterUrl="/videos/DEN086_Amex_Membership_081025_Lets_Go_Back_9x16_60fps.jpg"
                     brand={logoAmex}
                     job="Let's go back"
                 >
@@ -393,6 +394,7 @@ function HomePageComponent() {
 
                 <VideoPlayerMobile
                     videoUrl="/videos/CoD_BlackOps7_LaunchVideo_Alt_2_V006_compressed_1.mp4"
+                    posterUrl="/videos/CoD_BlackOps7_LaunchVideo_Alt_2_V006_compressed_1.jpg"
                     brand={logoCOD}
                     job="Black Ops 7"
                 >

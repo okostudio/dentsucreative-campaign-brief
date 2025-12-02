@@ -67,6 +67,7 @@ const VideoPlayerMobile = (props) => {
                     <ReactPlayer
                         ref={video}
                         src={props.videoUrl}
+                        light={props.posterUrl}
                         playing={isPlaying} // Set to true to enable autoplay
                         loop={true} // Optional: Set to true to loop the video
                         muted={true} // Set to true to mute the video on load for reliable autoplay
