@@ -6,8 +6,8 @@ function Nav() {
         <nav>
             {/* <div className="container"> */}
             <LogoDC />
-            {/* <LockupCreatedByDC /> */}
-            <h5>Created by <strong>Dentsu Creative</strong></h5>
+            <LockupCreatedByDC />
+            {/* <h5>Created by <strong>Dentsu Creative</strong></h5> */}
             {/* </div> */}
         </nav>
     )
