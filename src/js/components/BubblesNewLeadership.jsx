@@ -50,7 +50,7 @@ const BubblesNewLeadership = () => {
             <Bubble>
                 <div>
                     <img src={vanessa} alt="Vanessa Nicol" />
-                    <h5>vanessa
+                    <h5>
                         <strong>Vanessa Nicol</strong><br />
                         Chief Operating Officer
                     </h5>

@@ -101,6 +101,8 @@
 
     .overlay {
         user-select: none;
+        touch-action: none;
+        pointer-events: none;
         position: absolute;
         top: 8vw;
         width: 96vw;
