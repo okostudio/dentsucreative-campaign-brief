@@ -10,10 +10,11 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 // images
 import iphone from "/videos/iPhone16Dark.svg";
+import useIsMobile from '../hooks/useIsMobile';
 
 
 const VideoPlayerMobile = (props) => {
-
+    const isMobile = useIsMobile(768)
     const wrapper = useRef()
     const video = useRef()
 
@@ -28,10 +29,10 @@ const VideoPlayerMobile = (props) => {
                         start: "top center",
                         end: "bottom center",
                         markers: false,
-                        onEnter: () => { setIsPlaying(true); },
-                        onEnterBack: () => { setIsPlaying(true); },
-                        onLeave: () => { setIsPlaying(false); },
-                        onLeaveBack: () => { setIsPlaying(false); }
+                        onEnter: () => { isMobile ? null : setIsPlaying(true) },
+                        onEnterBack: () => { isMobile ? null : setIsPlaying(true) },
+                        onLeave: () => { isMobile ? null : setIsPlaying(false) },
+                        onLeaveBack: () => { isMobile ? null : setIsPlaying(false) }
                     }
                 })
                 tl.from(".video", { opacity: 0, y: "2vw", ease: "power3.out" })
@@ -64,16 +65,30 @@ const VideoPlayerMobile = (props) => {
             <div className="mobile video">
                 <img src={iphone} alt="iphone 16" className='phone' />
                 <div className="video-scaler">
-                    <ReactPlayer
-                        ref={video}
-                        src={props.videoUrl}
-                        light={props.posterUrl}
-                        playing={isPlaying} // Set to true to enable autoplay
-                        loop={true} // Optional: Set to true to loop the video
-                        muted={true} // Set to true to mute the video on load for reliable autoplay
-                        width='100%'
-                        height='100%'
-                    />
+                    {
+                        isMobile ?
+                            <ReactPlayer
+                                ref={video}
+                                src={props.videoUrl}
+                                light={props.posterUrl}
+                                playing={isPlaying} // Set to true to enable autoplay
+                                loop={true} // Optional: Set to true to loop the video
+                                muted={true} // Set to true to mute the video on load for reliable autoplay
+                                width='100%'
+                                height='100%'
+                            />
+                            :
+                            <ReactPlayer
+                                ref={video}
+                                src={props.videoUrl}
+                                playing={isPlaying} // Set to true to enable autoplay
+                                loop={true} // Optional: Set to true to loop the video
+                                muted={true} // Set to true to mute the video on load for reliable autoplay
+                                width='100%'
+                                height='100%'
+                            />
+                    }
+
                 </div>
             </div>
             {

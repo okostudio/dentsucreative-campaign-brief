@@ -173,7 +173,7 @@ const BubblesNewPeople = () => {
                     <img src={RowanMarshCroft} alt="New Person" />
                     <h5>
                         <strong>Rowan Marsh Croft </strong><br />
-                        Art Directorv
+                        Art Director
                     </h5>
                 </div>
             </Bubble>
