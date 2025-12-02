@@ -35,6 +35,21 @@ const VideoPlayerMobile = (props) => {
                     }
                 })
                 tl.from(".video", { opacity: 0, y: "2vw", ease: "power3.out" })
+
+                if (props.children) {
+                    const parallax = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: wrapper.current,
+                            start: "top center",
+                            end: "bottom center",
+                            markers: false,
+                            scrub: 0.75
+                        }
+                    })
+                    parallax.fromTo(".overlay", { y: "5vw" }, { y: "-5vw", duration: 2, ease: "linear" }, 0)
+
+                }
+
             }, wrapper.current);
         }
         , [wrapper]
