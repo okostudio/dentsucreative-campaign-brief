@@ -12,7 +12,7 @@
         width: 100%;
         aspect-ratio: calc(16 / 9);
         overflow: clip;
-        border-radius: 3vw;
+        border-radius: 1.5vw;
         // background-color: #222;
 
         &.mobile {
@@ -113,7 +113,7 @@
         margin-bottom: 0vw;
 
         .video {
-            border-radius: 1.5vw;
+            border-radius: 1vw;
         }
     }
 }

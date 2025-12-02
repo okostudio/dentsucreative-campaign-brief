@@ -51,6 +51,7 @@ const VideoPlayer = (props) => {
                     muted={true} // Set to true to mute the video on load for reliable autoplay
                     width='100%'
                     height='100%'
+                    controls={true}
                 />
             </div>
         </div>

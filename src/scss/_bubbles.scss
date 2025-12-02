@@ -14,7 +14,12 @@
     > :nth-child(4),
     > :nth-child(6),
     > :nth-child(8),
-    > :nth-child(10) {
+    > :nth-child(10),
+    > :nth-child(12),
+    > :nth-child(14),
+    > :nth-child(16),
+    > :nth-child(18),
+    > :nth-child(20) {
         top: 20vw;
     }
 
@@ -58,11 +63,13 @@
         > :nth-child(2),
         > :nth-child(5),
         > :nth-child(8),
-        > :nth-child(11) {
+        > :nth-child(11),
+        > :nth-child(14),
+        > :nth-child(17),
+        > :nth-child(20),
+        > :nth-child(23) {
             top: 12vw;
         }
-
-
 
         .bubble {
             width: 20vw;
@@ -191,7 +198,7 @@
 
         @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
-            row-gap: 4vw;
+            row-gap: 8vw;
             padding-bottom: 5vw;
 
             .bubble {
@@ -211,6 +218,8 @@
         }
 
         @media (min-width: 1440px) {
+            row-gap: 4vw;
+
             .bubble {
                 margin-bottom: 1vw;
 
