@@ -13,6 +13,40 @@
         aspect-ratio: calc(16 / 9);
         overflow: clip;
         border-radius: 3vw;
+        // background-color: #222;
+
+        &.mobile {
+            width: 33vw;
+            margin: 0 auto;
+            position: relative;
+            overflow: visible;
+            // background: red;
+            // border-radius: 7vw;
+
+
+            .phone {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+            }
+
+            .video-scaler {
+                width: 92%;
+                height: 100%;
+                top: 0;
+                left: 4%;
+                position: absolute;
+
+                video {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+        }
     }
 
     .images {
@@ -64,6 +98,8 @@
             text-align: center;
         }
     }
+
+
 }
 
 .grid-col2 {

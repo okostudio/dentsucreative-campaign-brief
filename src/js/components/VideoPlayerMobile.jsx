@@ -8,7 +8,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 
-const VideoPlayer = (props) => {
+// images
+import iphone from "/videos/iPhone16Dark.svg";
+
+
+const VideoPlayerMobile = (props) => {
 
     const wrapper = useRef()
     const video = useRef()
@@ -37,25 +41,28 @@ const VideoPlayer = (props) => {
     )
 
     return (
-        <div className="video-wrapper" ref={wrapper}>
+        <div className="video-wrapper centered" ref={wrapper}>
             {props.brand && props.job ?
                 <h4><img className='brand-logo' src={props.brand} alt={props.job} /><span className="divider-horz"></span>{props.job}</h4>
                 : null
             }
-            <div className="video">
-                <ReactPlayer
-                    ref={video}
-                    src={props.videoUrl}
-                    playing={isPlaying} // Set to true to enable autoplay
-                    loop={true} // Optional: Set to true to loop the video
-                    muted={true} // Set to true to mute the video on load for reliable autoplay
-                    width='100%'
-                    height='100%'
-                />
+            <div className="mobile video">
+                <img src={iphone} alt="iphone 16" className='phone' />
+                <div className="video-scaler">
+                    <ReactPlayer
+                        ref={video}
+                        src={props.videoUrl}
+                        playing={isPlaying} // Set to true to enable autoplay
+                        loop={true} // Optional: Set to true to loop the video
+                        muted={true} // Set to true to mute the video on load for reliable autoplay
+                        width='100%'
+                        height='100%'
+                    />
+                </div>
             </div>
         </div>
     )
 }
 
-export default VideoPlayer
+export default VideoPlayerMobile
 

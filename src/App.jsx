@@ -15,6 +15,7 @@ import StaticImageParallax from './js/components/StaticImageParallax';
 
 import { ReactLenis } from 'lenis/react'
 import VideoPlayer from './js/components/VideoPlayer';
+import VideoPlayerMobile from './js/components/VideoPlayerMobile';
 import BubblesWins from './js/components/BubblesWins';
 import BubblesAwards from './js/components/BubblesAwards';
 import BubblesNewLeadership from './js/components/BubblesNewLeadership';
@@ -245,153 +246,7 @@ function App() {
         }
 
 
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1084815116?fl=pl&fe=sh"}
-          brand={logoIconic}
-          job="Banner Ad Changeroom"
-        ></VideoPlayer>
-
-        <div className="creative-work">
-          <h3 className="xl">
-            <ScrollReveal type="basic">
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work
-            </ScrollReveal>
-          </h3>
-        </div>
-
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141061873?fl=pl&fe=sh"}
-          brand={logoAmex}
-          job="FPO Film"
-        ></VideoPlayer>
-
-
-        {isMobile ?
-          <VideoPlayer
-            videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
-          // brand={logoAmex}
-          // job="FPO Film"
-          ></VideoPlayer>
-          :
-          <div className="grid-col2">
-            <VideoPlayer
-              videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
-            // brand={logoAmex}
-            // job="FPO Film"
-            ></VideoPlayer>
-            <h3 className="momentum left r40">
-              <ScrollReveal type="basic">
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum
-              </ScrollReveal>
-            </h3>
-          </div>
-        }
-
-
-
-        <div className="creative-work">
-          <h3 className="xl">
-            <ScrollReveal type="basic">
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work
-            </ScrollReveal>
-          </h3>
-        </div>
-
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141062891?fl=pl&fe=sh"}
-          brand={logoAmex}
-          job="Plan It"
-        ></VideoPlayer>
-
-        {isMobile ?
-          <VideoPlayer
-            videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
-          // brand={logoAmex}
-          // job="Plan It"
-          ></VideoPlayer>
-          :
-          <div className="grid-col2">
-            <h3 className="momentum">
-              <ScrollReveal type="basic">
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum
-              </ScrollReveal>
-            </h3>
-            <VideoPlayer
-              videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
-            // brand={logoAmex}
-            // job="Plan It"
-            ></VideoPlayer>
-          </div>
-        }
-
-
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1141063914?fl=pl&fe=sh"}
-        // brand={logoAmex}
-        // job="Plan It"
-        ></VideoPlayer>
-
-        {isMobile ?
-          <VideoPlayer
-            videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
-          // brand={logoAmex}
-          // job="Plan It"
-          ></VideoPlayer>
-          :
-          <div className="grid-col2">
-            <VideoPlayer
-              videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
-            // brand={logoAmex}
-            // job="Plan It"
-            ></VideoPlayer>
-            <h3 className="momentum left r40">
-              <ScrollReveal type="basic">
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum <br />
-                Momentum
-              </ScrollReveal>
-            </h3>
-          </div>
-        }
-
-
-
-        <VideoPlayer
-          videoUrl={"https://vimeo.com/1115777560?fl=pl&fe=sh"}
-          brand={logoChery}
-          job="Drive further, stop less"
-        ></VideoPlayer>
-
-        <div className="creative-work">
-          <h3 className="xl">
-            <ScrollReveal type="basic">
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work <br />
-              Creative Work
-            </ScrollReveal>
-          </h3>
-        </div>
-
+        {/* ICONIC GYL */}
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141064026?fl=pl&fe=sh"}
           brand={logoIconic}
@@ -422,13 +277,149 @@ function App() {
             ></VideoPlayer>
           </div>
         }
-
-
         <VideoPlayer
           videoUrl={"https://vimeo.com/1141064070?fl=pl&fe=sh"}
         // brand={logoIconic}
         // job="Got you Looking"
         ></VideoPlayer>
+
+
+        <div className="creative-work">
+          <h3 className="xl">
+            <ScrollReveal type="basic">
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work
+            </ScrollReveal>
+          </h3>
+        </div>
+
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1141062891?fl=pl&fe=sh"}
+          brand={logoAmex}
+          job="Plan It"
+        ></VideoPlayer>
+        {isMobile ?
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="Plan It"
+          ></VideoPlayer>
+          :
+          <div className="grid-col2">
+            <h3 className="momentum">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141062019?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="Plan It"
+            ></VideoPlayer>
+          </div>
+        }
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1141063914?fl=pl&fe=sh"}
+        // brand={logoAmex}
+        // job="Plan It"
+        ></VideoPlayer>
+        {isMobile ?
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="Plan It"
+          ></VideoPlayer>
+          :
+          <div className="grid-col2">
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141063854?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="Plan It"
+            ></VideoPlayer>
+            <h3 className="momentum left r40">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+          </div>
+        }
+
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1084815116?fl=pl&fe=sh"}
+          brand={logoIconic}
+          job="Banner Ad Changeroom"
+        ></VideoPlayer>
+
+        <div className="creative-work">
+          <h3 className="xl">
+            <ScrollReveal type="basic">
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work <br />
+              Creative Work
+            </ScrollReveal>
+          </h3>
+        </div>
+
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1115777560?fl=pl&fe=sh"}
+          brand={logoChery}
+          job="Drive further, stop less"
+        ></VideoPlayer>
+
+
+        {/* AMEX MOBILE VIDEO THING ============= */}
+        <VideoPlayerMobile
+          videoUrl="/videos/DEN086_Amex_Membership_081025_Lets_Go_Back_9x16_60fps.mp4"
+          brand={logoAmex}
+          job="Let's go back"
+        >
+
+        </VideoPlayerMobile>
+
+        {/* AMEX FPO ============= */}
+        <VideoPlayer
+          videoUrl={"https://vimeo.com/1141061873?fl=pl&fe=sh"}
+          brand={logoAmex}
+          job="FPO Film"
+        ></VideoPlayer>
+        {isMobile ?
+          <VideoPlayer
+            videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
+          // brand={logoAmex}
+          // job="FPO Film"
+          ></VideoPlayer>
+          :
+          <div className="grid-col2">
+            <VideoPlayer
+              videoUrl={"https://vimeo.com/1141061924?fl=pl&fe=sh"}
+            // brand={logoAmex}
+            // job="FPO Film"
+            ></VideoPlayer>
+            <h3 className="momentum left r40">
+              <ScrollReveal type="basic">
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum <br />
+                Momentum
+              </ScrollReveal>
+            </h3>
+          </div>
+        }
+
 
         <StaticImageParallax
           brand={logoCOD}
