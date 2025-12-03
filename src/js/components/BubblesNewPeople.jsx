@@ -28,7 +28,14 @@ import RowanMarshCroft from "/images/people/newbies/Rowan_Marsh_Croft__Art_Direc
 import StephaniePeric from "/images/people/newbies/Stephanie_Peric__PR_Account_Manager.png"
 import YolandaRodriguez from "/images/people/newbies/Yolanda_Rodriguez__Senior_Business_Manager.png"
 
+import ParisElwood from "/images/people/newbies/Paris_Elwood__Designer.png"
+import ConniePlatania from "/images/people/newbies/Connie_Platania_Senior_Account_Manager.png"
+import useIsMobile from '../hooks/useIsMobile'
+
+
 const BubblesNewPeople = () => {
+    const isMobile = useIsMobile(768)
+
     return (
         <BubblesReveal>
 
@@ -41,6 +48,15 @@ const BubblesNewPeople = () => {
                     </h5>
                 </div>
             </Bubble >
+            <Bubble>
+                <div>
+                    <img src={ConniePlatania} alt="New Person" />
+                    <h5>
+                        <strong>Connie Platania </strong><br />
+                        Senior Account Manager
+                    </h5>
+                </div>
+            </Bubble>
             <Bubble>
                 <div>
                     <img src={EbonyStantin} alt="New Person" />
@@ -96,7 +112,7 @@ const BubblesNewPeople = () => {
                 </div>
             </Bubble>
 
-            < Bubble >
+            <Bubble>
                 <div>
                     <img src={JessicaSzakacs} alt="New Person" />
                     <h5>
@@ -159,12 +175,21 @@ const BubblesNewPeople = () => {
                     </h5>
                 </div>
             </Bubble>
-            < Bubble >
+            <Bubble>
                 <div>
                     <img src={OliverDrummond} alt="New Person" />
                     <h5>
                         <strong>Oliver Drummond </strong><br />
                         CX Strategist
+                    </h5>
+                </div>
+            </Bubble >
+            <Bubble>
+                <div>
+                    <img src={ParisElwood} alt="New Person" />
+                    <h5>
+                        <strong>Paris Elwood </strong><br />
+                        Designer
                     </h5>
                 </div>
             </Bubble >
@@ -186,6 +211,12 @@ const BubblesNewPeople = () => {
                     </h5>
                 </div>
             </Bubble>
+            {
+                isMobile ?
+                    null
+                    :
+                    <div className="spacer"></div>
+            }
             <Bubble>
                 <div>
                     <img src={YolandaRodriguez} alt="New Person" />
