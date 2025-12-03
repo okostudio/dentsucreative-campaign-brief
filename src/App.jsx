@@ -2,13 +2,14 @@
 import './App.scss'
 
 import { ReactLenis } from 'lenis/react'
-
+import HomePageComponent from './js/components/HomePageComponent';
 import Nav from './js/components/Nav'
+
+import { Analytics } from "@vercel/analytics/react"
 
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from 'react';
-import HomePageComponent from './js/components/HomePageComponent';
 gsap.registerPlugin(useGSAP);
 
 
@@ -41,7 +42,7 @@ function App() {
       <ReactLenis root ref={lenisRef} options={lenisOptions} />
       <Nav />
       <HomePageComponent />
-
+      <Analytics />
     </>
   )
 }
